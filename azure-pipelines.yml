@@ -75,3 +75,4 @@ stages:
               appName: $(functionAppName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               runtimeStack: DOCKER|microsoft/azure-functions-dotnet-core2.0:2.0
+              startUpCommand: 'func azure functionapp publish $(functionAppName) --no-bundler'
