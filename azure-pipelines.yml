@@ -106,10 +106,8 @@ stages:
               appSettings: |
                 [
                   {
-                    "name": "LeaderboardFunctionUrl",
+                    "name": "AppSettings_LeaderboardFunctionUrl",
                     "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
                     "slotSetting": false
                   }
                 ]
-          
-          
