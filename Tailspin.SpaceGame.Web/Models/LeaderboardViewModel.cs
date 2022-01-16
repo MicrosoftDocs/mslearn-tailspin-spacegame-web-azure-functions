@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace TailSpin.SpaceGame.Web.Models
 {
@@ -43,9 +44,10 @@ namespace TailSpin.SpaceGame.Web.Models
     /// </summary>
     public struct ScoreProfile
     {
-        // The player's score.
+        [JsonPropertyName("score")]
         public Score Score;
         // The player's profile.
+        [JsonPropertyName("profile")]
         public Profile Profile;
     }
 }
