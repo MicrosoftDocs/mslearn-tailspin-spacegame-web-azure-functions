@@ -42,12 +42,12 @@ namespace TailSpin.SpaceGame.Web.Models
     /// <summary>
     /// Combines a score and a user profile.
     /// </summary>
-    public struct ScoreProfile
+    public class ScoreProfile
     {
         [JsonPropertyName("score")]
-        public Score Score;
+        public Score Score { get; set; };
         // The player's profile.
         [JsonPropertyName("profile")]
-        public Profile Profile;
+        public Profile Profile { get; set; };
     }
 }
