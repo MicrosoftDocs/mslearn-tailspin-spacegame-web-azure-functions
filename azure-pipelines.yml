@@ -111,3 +111,18 @@ stages:
                     "slotSetting": false
                   }
                 ]
+
+          - task: AzureAppServiceSettings@1
+            displayName: 'Update web app settings'
+    inputs:
+    azureSubscription: 'Resource Manager - Tailspin - Space Game'
+    appName: $(WebAppName)
+    resourceGroupName: $(ResourceGroupName)
+    appSettings: |
+      [
+        {
+          "name": "AppSettings__LeaderboardFunctionUrl",
+          "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
+          "slotSetting": false
+        }
+      ]
